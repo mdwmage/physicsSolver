@@ -1,6 +1,6 @@
 # Evaluates to a SUVAT Value based on input
 
-import strutils # std/terminal
+import strutils#, std/terminal
 
 # basic yes/no question answer machine
 proc y_n(question: string): bool =
