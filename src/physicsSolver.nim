@@ -22,15 +22,16 @@ proc solve(equationVariables: seq[char], values: seq[int]): int =
     solvers = [['S', 'U', 'V', 'T'], ['V', 'U', 'A', 'T'], ['S', 'U', 'T', 'A'], ['V', 'U', 'A', 'S']]
   echo "Searching for proper equation"
 
+  # Find base equation to solve
   for i in solvers.low .. solvers.high:
     for x in solvers[i].low .. solvers[i].high:
 
       if solvers[i].contains(equationVariables[x]):
 
         if x == 3:
-
           echo "Equation found. Solving"
           echo solvers[i]
+
       else:
         break
 
